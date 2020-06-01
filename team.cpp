@@ -61,7 +61,7 @@ void team::delete_person(person& p)
 		pers.pop_back();
 		qty--;
 		all_spec.pop_back();
-		SumExp - +p.get_exp();
+		SumExp -= p.get_exp();
 	}
 }
 
