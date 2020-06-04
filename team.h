@@ -6,13 +6,13 @@
 #include <string>
 #include <vector>
 using namespace std;
-class team //структурное подразделение 
+class team //Г±ГІГ°ГіГЄГІГіГ°Г­Г®ГҐ ГЇГ®Г¤Г°Г Г§Г¤ГҐГ«ГҐГ­ГЁГҐ 
 {
 	string team_name;
-	vector<person> pers;//вектор людей в этом подразделении
-	int qty;//quantity-количество человек в подразделении
-	vector<string> all_spec;//вектор мпециальностей
-	int SumExp;//суммарный стаж работы всего подразделения
+	vector<person> pers;//ГўГҐГЄГІГ®Г° Г«ГѕГ¤ГҐГ© Гў ГЅГІГ®Г¬ ГЇГ®Г¤Г°Г Г§Г¤ГҐГ«ГҐГ­ГЁГЁ
+	int qty;//quantity-ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г·ГҐГ«Г®ГўГҐГЄ Гў ГЇГ®Г¤Г°Г Г§Г¤ГҐГ«ГҐГ­ГЁГЁ
+	vector<string> all_spec;//ГўГҐГЄГІГ®Г° Г¬ГЇГҐГ¶ГЁГ Г«ГјГ­Г®Г±ГІГҐГ©
+	int SumExp;//Г±ГіГ¬Г¬Г Г°Г­Г»Г© Г±ГІГ Г¦ Г°Г ГЎГ®ГІГ» ГўГ±ГҐГЈГ® ГЇГ®Г¤Г°Г Г§Г¤ГҐГ«ГҐГ­ГЁГї
 public:
 	team();
 	team(string name, vector<person> p);
@@ -22,9 +22,9 @@ public:
 	int get_SumExp();
 	void set_team_name(string NewName);
 	void add_person(person& p);
-	void delete_person(person& p);//p[i]=0; for(j=i;...){p[j]=p[j+1]} (дальше либо метод resize(N) либо разобраться с popback
+	void delete_person(person& p);//p[i]=0; for(j=i;...){p[j]=p[j+1]} (Г¤Г Г«ГјГёГҐ Г«ГЁГЎГ® Г¬ГҐГІГ®Г¤ resize(N) Г«ГЁГЎГ® Г°Г Г§Г®ГЎГ°Г ГІГјГ±Гї Г± popback
 	void print_spec();
-	friend std::ostream& operator<<(std::ostream& out, team& t);//печатаем все что есть (возможно без инфы о работниках)
+	friend ostream& operator<<(ostream& out, team& t);//ГЇГҐГ·Г ГІГ ГҐГ¬ ГўГ±ГҐ Г·ГІГ® ГҐГ±ГІГј (ГўГ®Г§Г¬Г®Г¦Г­Г® ГЎГҐГ§ ГЁГ­ГґГ» Г® Г°Г ГЎГ®ГІГ­ГЁГЄГ Гµ)
 	team operator+(person& p);
 };
 
